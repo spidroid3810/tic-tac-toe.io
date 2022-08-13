@@ -7,7 +7,7 @@ html{
     --button: #0077ff;
     --player: red;
     --player2: green;
-    --color: green;
+    --color: limegreen;
     --color2: red;
 }
 
@@ -17,7 +17,7 @@ html[data-theme='dark'] {
     --bg-panel: #555;
     --color-heading: #0077ff; 
     --color-text: #ffffff;
-    --button: #0077ff;
+    --button: #282C2F;
     --player: red;
     --player2: green;
 }
@@ -162,12 +162,12 @@ body{
   border-radius: 5px;
   transition: all 0.3s ease;
   box-shadow: 0 0 5px var(--color-text),
-  0 0 10px limegreen, 
-  0 0 20px limegreen, 
-  0 0 30px limegreen, 
-  0 0 40px limegreen, 
-  0 0 55px limegreen, 
-  0 0 70px limegreen; 
+  0 0 10px var(--color-text), 
+  0 0 20px var(--color), 
+  0 0 30px var(--color), 
+  0 0 40px var(--color), 
+  0 0 55px var(--color), 
+  0 0 70px var(--color); 
   }
 
   
@@ -183,12 +183,12 @@ body{
   color: var(--color-text);
   border-radius: 5px;
   box-shadow: 0 0 5px var(--color-text),
-  0 0 10px red, 
-  0 0 20px red, 
-  0 0 30px red, 
-  0 0 40px red, 
-  0 0 55px red, 
-  0 0 70px red; 
+  0 0 10px var(--color-text), 
+  0 0 20px var(--color2), 
+  0 0 30px var(--color2), 
+  0 0 40px var(--color2), 
+  0 0 55px var(--color2), 
+  0 0 70px var(--color2); 
 }
 .players.active .slider{
   left: 50%;
