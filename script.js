@@ -35,13 +35,13 @@ function clickedBox(element){
     if(players.classList.contains("player")){
         playerSign = "O";
         element.innerHTML = `<i style="
-        text-shadow: 0 0 5px var(--color),
-        0 0 10px var(--color), 
-        0 0 20px var(--player2), 
-        0 0 30px var(--player2), 
-        0 0 40px var(--player2), 
-        0 0 55px var(--player2), 
-        0 0 70px var(--player2);
+        text-shadow: 0 0 5px var(--color2),
+        0 0 10px var(--color2), 
+        0 0 20px var(--player), 
+        0 0 30px var(--player), 
+        0 0 40px var(--player), 
+        0 0 55px var(--player), 
+        0 0 70px var(--player);
         " class="${playerOIcon}"></i>`;
         players.classList.remove("active");
         element.setAttribute("id", playerSign);
@@ -81,13 +81,13 @@ function bot(){
             if(players.classList.contains("player")){ 
                 playerSign = "X";
                 allBox[randomBox].innerHTML = `<i style="
-text-shadow: 0 0 5px var(--color2),
-        0 0 10px var(--color2), 
-        0 0 20px var(--player), 
-        0 0 30px var(--player), 
-        0 0 40px var(--player), 
-        0 0 55px var(--player), 
-        0 0 70px var(--player);" class="${playerXIcon}"></i>`;
+text-shadow: 0 0 5px var(--color),
+        0 0 10px var(--color), 
+        0 0 20px var(--player2), 
+        0 0 30px var(--player2), 
+        0 0 40px var(--player2), 
+        0 0 55px var(--player2), 
+        0 0 70px var(--player2);" class="${playerXIcon}"></i>`;
                 allBox[randomBox].setAttribute("id", playerSign);
                 players.classList.add("active");
             }else{

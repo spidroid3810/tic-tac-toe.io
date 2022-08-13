@@ -205,12 +205,12 @@ body{
 }
 .play-area section span{
   display: block;
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   margin: 2px;
   color: var(--color-text);
   font-size: 40px;
-  line-height: 80px;
+  line-height: 60px;
   text-align: center;
   border-radius: 5px;
   background: var(--bg-panel);
@@ -330,11 +330,12 @@ border: none;
 margin-left:80px;
 }
 
+
 .board1{
 background: var(--bg-panel);
 width: 50%;
 border-radius:5px;
 padding: 10px 0;
 border: none;
-margin-left:68.5px;
+margin-left:77.5px;
 }
