@@ -331,6 +331,7 @@ margin-left:80px;
 font-size:25px;
 color: var(--color-text);
 transition: all 0.3s ease;
+font-weight: 500;
 }
 
 
@@ -343,5 +344,6 @@ padding: 10px 0;
 border: none;
 margin-left:85px;
 font-size:25px;
+font-weight: 500;
 color: var(--color-text);
 }

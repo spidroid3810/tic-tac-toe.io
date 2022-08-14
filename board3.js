@@ -125,7 +125,7 @@ function selectWinner(){
             resultBox.classList.add("show");
             playBoard.classList.remove("show");
         }, 700);
-        wonText.innerHTML = `Player <p>${playerSign}</p> won the game!`;
+        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Player <p>${playerSign}</p> won the game!`;
     }else{
         if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
             runBot = false;
@@ -134,7 +134,7 @@ function selectWinner(){
                 resultBox.classList.add("show");
                 playBoard.classList.remove("show");
             }, 700);
-            wonText.textContent = "Match has been drawn!";
+            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Match has been drawn!`;
         }
     }
 }
