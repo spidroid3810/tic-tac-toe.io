@@ -144,7 +144,9 @@ replayBtn.onclick = ()=>{
 }
 
 
-
+function myFunction() {
+  location.href = "index.html";
+}
 
 
  

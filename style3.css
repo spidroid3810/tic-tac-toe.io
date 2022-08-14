@@ -328,7 +328,11 @@ border-radius:5px;
 padding: 10px 0;
 border: none;
 margin-left:80px;
+font-size:25px;
+color: var(--color-text);
+transition: all 0.3s ease;
 }
+
 
 
 .board1{
@@ -338,4 +342,6 @@ border-radius:5px;
 padding: 10px 0;
 border: none;
 margin-left:85px;
+font-size:25px;
+color: var(--color-text);
 }

@@ -34,7 +34,7 @@ runBot = true;
 function clickedBox(element){
     if(players.classList.contains("player")){
         playerSign = "O";
-        element.innerHTML = `<i style="
+        element.innerHTML = `<i style=" 
         text-shadow: 0 0 5px var(--color2),
         0 0 10px var(--color2), 
         0 0 20px var(--player), 
@@ -46,7 +46,7 @@ function clickedBox(element){
         players.classList.remove("active");
         element.setAttribute("id", playerSign);
     }else{
-        element.innerHTML = `<i style="
+        element.innerHTML = `<i style=" 
         text-shadow: 0 0 5px var(--color),
         0 0 10px var(--color), 
         0 0 20px var(--player2), 
@@ -80,7 +80,7 @@ function bot(){
         if(array.length > 0){
             if(players.classList.contains("player")){ 
                 playerSign = "X";
-                allBox[randomBox].innerHTML = `<i style="
+                allBox[randomBox].innerHTML = `<i style=" 
 text-shadow: 0 0 5px var(--color),
         0 0 10px var(--color), 
         0 0 20px var(--player2), 
@@ -144,8 +144,18 @@ replayBtn.onclick = ()=>{
     window.location.reload();
 }
 
+function myFunction() {
+  location.href = "index.html";
+}
 
-
-
-
+ function page1() {
+ location.href = "index1.html";
+ }
  
+ function page2() {
+ location.href = "index2.html";
+ }
+ 
+ function page3() {
+ location.href = "index3.html";
+ }
