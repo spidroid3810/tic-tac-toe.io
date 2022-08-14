@@ -127,7 +127,7 @@ function selectWinner(){
         }, 700);
         wonText.innerHTML = `Player <p>${playerSign}</p> won the game!`;
     }else{
-        if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
+        if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != "" && getIdVal(10) != "" && getIdVal(11) != "" && getIdVal(12) != "" && getIdVal(13) != "" && getIdVal(14) != "" && getIdVal(15) != "" && getIdVal(16) != "" && getIdVal(17) != "" && getIdVal(18) != "" && getIdVal(19) != "" && getIdVal(20) != "" && getIdVal(21) != "" && getIdVal(22) != "" && getIdVal(23) != "" && getIdVal(24) != "" && getIdVal(25) != ""){
             runBot = false;
             bot(runBot);
             setTimeout(()=>{
