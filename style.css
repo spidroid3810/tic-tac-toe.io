@@ -2,7 +2,7 @@
 html{
     --bg: #0077ff;
     --bg-panel: #ebebeb;
-    --color-heading: #555;
+    --color-heading: #282C2F;
     --color-text: #333333;
     --button: #0077ff;
     --player: red;
@@ -62,8 +62,7 @@ body{
   font-weight: 600;
   text-align:center;
   padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
-  background: var(--color-text);
+  background: var(--color-heading);
   border-radius:50px;
 }
 .select-box .title{
