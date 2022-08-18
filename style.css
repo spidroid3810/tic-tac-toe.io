@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+html{
+    --bg: #0077ff;
+    --bg-panel: #ebebeb;
+    --color-heading: #282C2F;
+    --color-text: #333333;
+    --button: #0077ff;
+    --player: red;
+    --player2: green;
+    --color: limegreen;
+    --color2: red;
+    --color3: #ffffff;
+}
+
+/* dark theme styling - Here, we set data-them as "dark"*/
+html[data-theme='dark'] {
+    --bg: #282C2F;
+    --bg-panel: #555;
+    --color-heading: #0077ff; 
+    --color-text: #ffffff;
+    --button: #282C2F;
+    --player: red;
+    --player2: limegreen;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: var(--bg);
+  background: var(--bg);
+}
+body{
+  background: var(--bg);
+}
+.select-box, .play-board, .result-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.select-box{
+  background:var(--bg-panel);
+  padding: 20px 25px 25px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  color: var(--color-text);
+  
+   
+}
+.select-box.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+.select-box header{
+  font-size: 50px;
+  font-weight: 600;
+  text-align:center;
+  padding-bottom: 10px;
+  background: var(--color-heading);
+  border-radius:50px;
+}
+.select-box .title{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.select-box .options{
+  display: flex;
+  width: 100%;
+}
+.options button{
+  width: 100%;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: var(--button);
+  border-radius: 5px;
+  color:var(--color-text);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.options button:hover,
+.btn button:hover{
+  transform: scale(0.96);
+}
+.options button.playerX{
+  margin-right: 5px;
+}
+.options button.playerO{
+  margin-left: 5px;
+}
+
+.select-box .credit{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.select-box .credit a{
+  color: var(--button);
+  text-decoration: none;
+  font-weight: bold;
+}
+.select-box .credit a:hover{
+  text-decoration: underline;
+}
+
+.play-board{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.play-board.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.play-board .details{
+  padding: 7px;
+  border-radius: 5px;
+  background: var(--bg-panel);
+}
+.play-board .players{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.players span{
+  position: relative;
+  z-index: 2;
+  color: var(--button);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  transition: all 0.3 ease;
+}
+.players.active span:first-child{
+  color: var(--color-text);
+}
+.players.active span:last-child{
+  color: var(--color-text);
+}
+.players span:first-child{
+  color: var(--color-text);
+}
+.players .slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px var(--color3),
+  0 0 10px var(--color3), 
+  0 0 20px var(--color), 
+  0 0 30px var(--color), 
+  0 0 40px var(--color), 
+  0 0 55px var(--color), 
+  0 0 70px var(--color); 
+  }
+
+  
+
+.players.active .slider{
+  left: 50%;
+}
+.players.active span:first-child{
+  color:var(--button);
+}
+.players.active span:nth-child(2){
+  background: var(--color2);
+  color: var(--color-text);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--color3),
+  0 0 10px var(--color3), 
+  0 0 20px var(--color2), 
+  0 0 30px var(--color2), 
+  0 0 40px var(--color2), 
+  0 0 55px var(--color2), 
+  0 0 70px var(--color2); 
+}
+.players.active .slider{
+  left: 50%;
+}
+
+.play-area{
+  margin-top: 20px;
+}
+.play-area section{
+  display: flex;
+  margin-bottom: 1px;
+}
+.play-area section span{
+  display: block;
+  height: 90px;
+  width: 90px;
+  margin: 2px;
+  color: var(--color-text);
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--bg-panel);
+}
+
+
+
+.result-box{
+  padding: 25px 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  background: var(--bg-panel);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.result-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.result-box .won-text{
+  font-size: 30px;
+  font-weight: bold;
+  display: lnline;
+  justify-content: center;
+  color: var(--color-text);
+}
+.result-box .won-text p{
+  font-weight: 600;
+  margin: 0 5px;
+}
+.result-box .btn{
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.btn button{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  background: var(--button);
+  border-radius: 5px;
+  color: var(--color-text);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type=checkbox],input[type=radio] { /* styling for input element */
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label { /* styling for labels */
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: var(--color-heading);
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+label:after { /* styling for labels - on toggle */
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+input:checked + label { /* conditional check while toggling */
+    background: var(--color-heading);
+}
+
+
+input:checked + label:after {
+    left: calc(100% - 5px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+a{
+text-decoration:none;
+color:var(--color-text);
+font-size: 25px;
+font-weight: 500;
+margin: 2px 50px;
+outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.board{
+background: var(--button);
+width: 50%;
+border-radius:5px;
+padding: 10px 0;
+border: none;
+margin-left:80px;
+font-size:25px;
+color: var(--color-text);
+transition: all 0.3s ease;
+font-weight: 500;
+}
+
+.board1{
+background: var(--bg-panel);
+width: 50%;
+border-radius:5px;
+padding: 10px 0;
+border: none;
+margin-left:68.5px;
+font-size:25px;
+font-weight: 500;
+color: var(--color-text);
+}
+
+
+nav{
+background: var(--bg-panel);
+height: 50px;
+width:100%;
+}
