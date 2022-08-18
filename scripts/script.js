@@ -33,7 +33,7 @@ runBot = true;
 
 function clickedBox(element){
     if(players.classList.contains("player")){
-        playerSign = "SuperVillain";
+        playerSign = "‍SuperVillain";
         element.innerHTML = `<i style=" 
         text-shadow: 0 0 5px var(--color2),
         0 0 10px var(--color2), 
@@ -126,7 +126,7 @@ function selectWinner(){
             resultBox.classList.add("show");
             playBoard.classList.remove("show");
         }, 700);
-        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div><img src= "party-popper.png" height="100px" width="100px" > <img src="trophy.png" height="100px" width="100px"><img src= "party-popper.png" height="100px" width="100px" style="transform: scaleX(-1);" ><br> Player <p>${playerSign}</p> won the game!`;
+        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div><img src= "party-popper.png" height="100px" width="100px" > <img src="trophy.png" height="100px" width="100px"><img src= "party-popper.png" height="100px" width="100px" style="transform: scaleX(-1);" ><br> Player<br><i style="font-weight: bold;color: var(--bg);">${playerSign}</i><br>  won the game!`;
     }else{
         if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
             runBot = false;
