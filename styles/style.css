@@ -20,7 +20,7 @@ html[data-theme='dark'] {
     --color-text: #ffffff;
     --button: #282C2F;
     --player: red;
-    --player2: green;
+    --player2: limegreen;
 }
 
 *{
@@ -58,7 +58,7 @@ body{
   pointer-events: none;
 }
 .select-box header{
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 600;
   text-align:center;
   padding-bottom: 10px;
