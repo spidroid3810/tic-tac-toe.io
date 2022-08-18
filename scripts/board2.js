@@ -125,8 +125,8 @@ function selectWinner(){
             resultBox.classList.add("show");
             playBoard.classList.remove("show");
         }, 700);
-        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Player <p>${playerSign}</p> won the game!`;
-    }else{
+            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div><img src= "party-popper.png" height="100px" width="100px" > <img src="trophy.png" height="100px" width="100px"><img src= "party-popper.png" height="100px" width="100px" style="transform: scaleX(-1);" ><br> Player <p>${playerSign}</p> won the game!`;
+           }else{
         if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != "" && getIdVal(10) != "" && getIdVal(11) != "" && getIdVal(12) != "" && getIdVal(13) != "" && getIdVal(14) != "" && getIdVal(15) != "" && getIdVal(16) != "" && getIdVal(17) != "" && getIdVal(18) != "" && getIdVal(19) != "" && getIdVal(20) != "" && getIdVal(21) != "" && getIdVal(22) != "" && getIdVal(23) != "" && getIdVal(24) != "" && getIdVal(25) != ""){
             runBot = false;
             bot(runBot);
@@ -134,8 +134,8 @@ function selectWinner(){
                 resultBox.classList.add("show");
                 playBoard.classList.remove("show");
             }, 700);
-            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Match has been drawn!`;
-        }
+           wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div> <img src=sad.png height="100px" width="100px;"><br>Match has been drawn!`;
+          }
     }
 }
 

@@ -125,8 +125,8 @@ function selectWinner(){
             resultBox.classList.add("show");
             playBoard.classList.remove("show");
         }, 700);
-        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Player <p>${playerSign}</p> won the game!`;
-    }else{
+            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div><img src= "party-popper.png" height="100px" width="100px" > <img src="trophy.png" height="100px" width="100px"><img src= "party-popper.png" height="100px" width="100px" style="transform: scaleX(-1);" ><br> Player <p>${playerSign}</p> won the game!`;
+            }else{
         if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
             runBot = false;
             bot(runBot);
@@ -134,7 +134,7 @@ function selectWinner(){
                 resultBox.classList.add("show");
                 playBoard.classList.remove("show");
             }, 700);
-            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Match has been drawn!`;
+               wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div> <img src=sad.png height="100px" width="100px;"><br>Match has been drawn!`;
         }
     }
 }

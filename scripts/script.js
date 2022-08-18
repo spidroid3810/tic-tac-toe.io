@@ -28,12 +28,12 @@ selectBtnO.onclick = ()=>{
 
 let playerXIcon = "fas fa-times",
 playerOIcon = "far fa-circle",
-playerSign = "X",
+playerSign = "SuperHero",
 runBot = true;
 
 function clickedBox(element){
     if(players.classList.contains("player")){
-        playerSign = "O";
+        playerSign = "SuperVillain";
         element.innerHTML = `<i style=" 
         text-shadow: 0 0 5px var(--color2),
         0 0 10px var(--color2), 
@@ -41,8 +41,8 @@ function clickedBox(element){
         0 0 30px var(--player), 
         0 0 40px var(--player), 
         0 0 55px var(--player), 
-        0 0 70px var(--player);
-        " class="${playerOIcon}"></i>`;
+        0 0 70px var(--player);"
+        class="${playerOIcon}"></i>`;
         players.classList.remove("active");
         element.setAttribute("id", playerSign);
     }else{
@@ -53,8 +53,8 @@ function clickedBox(element){
         0 0 30px var(--player2), 
         0 0 40px var(--player2), 
         0 0 55px var(--player2), 
-        0 0 70px var(--player2);
-        "class="${playerXIcon}"></i>`;
+        0 0 70px var(--player2);"
+         class="${playerXIcon}"></i>`;
         element.setAttribute("id", playerSign);
         players.classList.add("active");
     }
@@ -70,7 +70,7 @@ function clickedBox(element){
 function bot(){
     let array = [];
     if(runBot){
-        playerSign = "O";
+        playerSign = "SuperVillain";
         for (let i = 0; i < allBox.length; i++) {
             if(allBox[i].childElementCount == 0){
                 array.push(i);
@@ -79,7 +79,7 @@ function bot(){
         let randomBox = array[Math.floor(Math.random() * array.length)];
         if(array.length > 0){
             if(players.classList.contains("player")){ 
-                playerSign = "X";
+                playerSign = "SuperHero";
                 allBox[randomBox].innerHTML = `<i style=" 
 text-shadow: 0 0 5px var(--color),
         0 0 10px var(--color), 
@@ -91,7 +91,7 @@ text-shadow: 0 0 5px var(--color),
                 allBox[randomBox].setAttribute("id", playerSign);
                 players.classList.add("active");
             }else{
-                allBox[randomBox].innerHTML = `<i style="
+                allBox[randomBox].innerHTML = `<i style=" 
                 text-shadow: 0 0 5px var(--color2),
                 0 0 10px var(--color2), 
                 0 0 20px var(--player), 
@@ -106,7 +106,7 @@ text-shadow: 0 0 5px var(--color),
         }
         allBox[randomBox].style.pointerEvents = "none";
         playBoard.style.pointerEvents = "auto";
-        playerSign = "X";
+        playerSign = "SuperHero";
     }
 }
 
@@ -126,7 +126,7 @@ function selectWinner(){
             resultBox.classList.add("show");
             playBoard.classList.remove("show");
         }, 700);
-        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Player <p>${playerSign}</p> won the game!`;
+        wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div><img src= "party-popper.png" height="100px" width="100px" > <img src="trophy.png" height="100px" width="100px"><img src= "party-popper.png" height="100px" width="100px" style="transform: scaleX(-1);" ><br> Player <p>${playerSign}</p> won the game!`;
     }else{
         if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
             runBot = false;
@@ -135,7 +135,7 @@ function selectWinner(){
                 resultBox.classList.add("show");
                 playBoard.classList.remove("show");
             }, 700);
-            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div>Match has been drawn!`;
+            wonText.innerHTML = `<div style="color: var(--bg);">Game Over</div> <img src=sad.png height="100px" width="100px;"><br>Match has been drawn!`;
         }
     }
 }
@@ -159,5 +159,8 @@ function myFunction() {
  function page3() {
  location.href = "index3.html";
  }
+ 
+
+ 
  
  
